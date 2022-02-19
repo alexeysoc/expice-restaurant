@@ -1,0 +1,122 @@
+.foods__title {
+    text-align: center;
+    border-left: none !important;
+    padding: 110px 0 0px 0px !important;
+    margin: 0 0 18px 0 !important;
+
+    @media (max-width: 1100px) {
+        padding: 26px 16px 10px 0px !important;
+    }
+}
+
+.foods__descr {
+    max-width: 609px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: center;
+    text-transform: capitalize;
+    color: $textcolor2;
+    margin-bottom: 60px;
+    @media (max-width: 1100px){
+        margin: 0 20px 28px 20px;
+    }
+}
+
+.foods__wrapper {
+    padding: 0 135px 145px 135px;
+
+    @media (max-width: 1400px) {
+        padding: 0 52px 80px 52px;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 0 20px 60px 20px;
+    }
+}
+
+.foods__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 56px;
+
+    @media (max-width: 1600px) {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 40px;
+    }
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 27px;
+        max-width: 514px;
+        margin: 0 auto;
+    }
+}
+
+.foods__item {
+    display: block;
+    border-radius: 25px;
+    overflow: hidden;
+    //border: 1px solid red;
+    background-color: $white;
+}
+
+.food__img {
+    width: 100%;
+    @media (max-width: 1135px){
+        height: 403px;
+    }
+    @media (max-width: 500px){
+        height: 350px;
+    }
+    @media (max-width: 400px){
+        height: 280px;
+    }
+}
+
+.foods__item-descr {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1000px){
+        padding: 30px 16px 26px 30px;
+    }
+}
+
+.foods__item-wrapper {
+    width: 290px;
+}
+
+.foods__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.33;
+    text-transform: capitalize;
+    color: $textcolor;
+    margin-bottom: 13px;
+    @media (max-width: 1000px){
+        margin-bottom: 16px;
+    }
+    @media (max-width: 400px){
+        font-size: 20px;
+    }
+}
+
+.foods__item-text {
+    font-size: 14px;
+    line-height: 1.71;
+    text-transform: capitalize;
+    color: $textcolor2;
+}
+
+.foods__item-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    text-transform: capitalize;
+    color: $accent;
+    @media (max-width: 400px){
+        font-size: 20px;
+    }
+}

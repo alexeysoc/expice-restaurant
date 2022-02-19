@@ -1,0 +1,65 @@
+// USER VARIABLES SECTION
+//Color
+$accent: #FE043C // Accent Color
+$textcolor: #2E266F // Text Color
+$textcolor2: #707070 // Text Color2
+$background1: #FFF5EC // Background Color1
+$background2: #FFEDDE // Background Color2
+$green: #31A24C //green
+$white: #fff //white
+
+$fontsize: 16px // Body Font Size
+$lineheight: 1.65 // Document Line Height
+$userfont: poppins, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('poppins', normal, 400, '../fonts/poppins-regular-webfont.woff2')
+@include font('poppins', normal, 500, '../fonts/poppins-medium-webfont.woff2')
+@include font('poppins', normal, 600, '../fonts/poppins-semibold-webfont.woff2')
+@include font('poppins', normal, 700, '../fonts/poppins-bold-webfont.woff2')
+@include font('poppins', normal, 900, '../fonts/poppins-black-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
